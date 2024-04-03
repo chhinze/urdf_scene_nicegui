@@ -1,0 +1,9 @@
+pyproject.toml
+requirements.txt
+src/urdf_scene_nicegui/__init__.py
+src/urdf_scene_nicegui/urdf_scene.py
+src/urdf_scene_nicegui.egg-info/PKG-INFO
+src/urdf_scene_nicegui.egg-info/SOURCES.txt
+src/urdf_scene_nicegui.egg-info/dependency_links.txt
+src/urdf_scene_nicegui.egg-info/requires.txt
+src/urdf_scene_nicegui.egg-info/top_level.txt

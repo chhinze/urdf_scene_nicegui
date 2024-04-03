@@ -1,0 +1,2 @@
+nicegui
+urchin # for structured URDF loading

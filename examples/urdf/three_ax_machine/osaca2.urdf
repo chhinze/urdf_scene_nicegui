@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="osaca2">
+  <!-- links -->
+  <link name="box_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="20"/>
+      <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.3" iyz="0" izz="0.3"/>
+    </inertial>
+    <!--<visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://osaca_support/meshes/visual/box.stl"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>-->
+  </link>
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="20"/>
+      <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.3" iyz="0" izz="0.3"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://osaca_support/meshes/visual/base.stl"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="a1_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="20"/>
+      <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.3" iyz="0" izz="0.3"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://osaca_support/meshes/visual/a1.stl"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="a2_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="20"/>
+      <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.3" iyz="0" izz="0.3"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://osaca_support/meshes/visual/a2.stl"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="a3_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="20"/>
+      <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.3" iyz="0" izz="0.3"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://osaca_support/meshes/visual/a3.stl"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="tcp"/>
+  <!-- joints -->
+  <joint name="box_base" type="fixed">
+    <parent link="box_link"/>
+    <child link="base_link"/>
+    <origin rpy="0.0 0 0" xyz="0.4805 0.1807 1.0970"/>
+  </joint>
+  <joint name="a1_joint" type="prismatic">
+    <parent link="base_link"/>
+    <child link="a1_link"/>
+    <origin rpy="0.0 0 0" xyz="0 -0.0645 0.2150"/>
+    <limit effort="30" lower="-0.08" upper="0" velocity="20"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="a2_joint" type="prismatic">
+    <parent link="base_link"/>
+    <child link="a2_link"/>
+    <origin rpy="0.0 0 0" xyz="0 0.0893 0.0964"/>
+    <limit effort="30" lower="-0.08" upper="0.08" velocity="20"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+  <joint name="a3_joint" type="prismatic">
+    <parent link="a1_link"/>
+    <child link="a3_link"/>
+    <origin rpy="0.0 0 0" xyz="0 0.1066 0.0626"/>
+    <limit effort="30" lower="-0.08" upper="0.08" velocity="20"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="a3_tcp" type="fixed">
+    <parent link="a3_link"/>
+    <child link="tcp"/>
+    <origin rpy="3.14159274 0 0" xyz="0 0.08 -0.1"/>
+  </joint>
+</robot>
