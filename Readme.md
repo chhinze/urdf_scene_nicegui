@@ -34,7 +34,7 @@ pip install -e .
 
 from nicegui import ui
 scene = UrdfScene(os.path.join(script_dir, "path/to/your.urdf"))
-scene.show(material="#888", scale_stls=1)
+scene.show(material="#888", scale_stls=1, background_color='#004191')
 ui.run()
 
 ```

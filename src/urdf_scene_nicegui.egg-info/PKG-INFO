@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: urdf_scene_nicegui
-Version: 0.2.0
-Summary: Helper Class to load URDF files (with STL meshes) into a nicegui scene
+Version: 0.2
+Summary: Load URDF files (with STL meshes) into a NiceGUI scene and animate them
 Author-email: Christoph Hinze <christoph@hinze.xyz>
 Classifier: Development Status :: 1 - Planning
 Classifier: Programming Language :: Python :: 3
@@ -9,5 +9,5 @@ Classifier: Intended Audience :: Manufacturing
 Classifier: Intended Audience :: Science/Research
 Classifier: License :: OSI Approved :: MIT License
 Requires-Python: >=3.9
-Requires-Dist: nicegui
+Requires-Dist: nicegui>=1.4.24
 Requires-Dist: urchin

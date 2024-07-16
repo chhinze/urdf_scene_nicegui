@@ -1,6 +1,6 @@
 [project]
 name = "urdf_scene_nicegui"
-version = "0.1"
+version = "0.2"
 authors=[
     {name = "Christoph Hinze", email = "christoph@hinze.xyz"},
 ]

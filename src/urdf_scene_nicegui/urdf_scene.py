@@ -58,14 +58,14 @@ class UrdfScene:
         self.joint_trafos = dict()
         self.scene = None
 
-    def show(self, scale_stls=1, material=None):
+    def show(self, scale_stls=1, material=None, background_color='#004191'):
         """plot a nicegui 3D scene from loaded URDF.
 
         Inputs:
         `scale_stls` (default:1) scales all STL files. E.g. pass 1e-1 if STLs are designed in mm
         `material` [default: None] color for the whole URDF (overrides mesh colors in STLs if defined), e.g. "#FFF" makes everything white
         """
-        with ui.scene(grid=False).classes("w-full h-[66vh]") as self.scene:
+        with ui.scene(grid=False, background_color=background_color).classes("w-full h-[66vh]") as self.scene:
             self._plot_stls(
                 self.urdf_model.base_link, scale=scale_stls, material=material
             )

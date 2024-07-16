@@ -1,2 +1,2 @@
-nicegui
+nicegui>=1.4.24
 urchin # for structured URDF loading
